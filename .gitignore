@@ -1,0 +1,47 @@
+# =========================
+# Visual Studio / IDE Files
+# =========================
+.vs/
+*.user
+*.suo
+*.db
+*.sln
+*.vcxproj
+*.vcxproj.filters
+
+# =========================
+# CMake Build Directories
+# =========================
+# Visual Studio defaults to the 'out/' folder for CMake builds
+/out/
+/build/
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Makefile
+cmake_install.cmake
+compile_commands.json
+
+# =========================
+# Compiled Binaries & Objects
+# =========================
+*.exe
+*.dll
+*.so
+*.dylib
+*.lib
+*.a
+*.obj
+*.o
+*.pdb
+
+# =========================
+# OS Generated Files
+# =========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
