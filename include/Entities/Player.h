@@ -1,5 +1,7 @@
 #pragma once
+#include <vector> 
 #include "raylib.h" 
+#include "Bullet.h" 
 
 class Player {
 public:
@@ -11,10 +13,12 @@ public:
 
     void draw() const;
 
+    void fireWeapon();
+
 private:
-    // Internal state (encapsulated)
     Vector2 position;
     float radiusSize;
     float speed;
     Color color;
+    std::vector<Bullet> bullets;
 };

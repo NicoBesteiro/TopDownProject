@@ -19,6 +19,7 @@ include_directories(include)
 add_executable(${PROJECT_NAME} 
     src/main.cpp
     src/Entities/Player.cpp
+    src/Entities/Bullet.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} PRIVATE raylib)
