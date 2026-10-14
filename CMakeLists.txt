@@ -20,6 +20,7 @@ add_executable(${PROJECT_NAME}
     src/main.cpp
     src/Entities/Player.cpp
     src/Entities/Bullet.cpp
-)
+    src/Input/MoveCommand.cpp
+  "include/Input/InputHandler.h" "src/Input/InputHandler.cpp")
 
 target_link_libraries(${PROJECT_NAME} PRIVATE raylib)

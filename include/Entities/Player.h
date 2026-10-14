@@ -2,6 +2,8 @@
 #include <vector> 
 #include "raylib.h" 
 #include "Bullet.h" 
+#include "raymath.h"  
+#include <algorithm> 
 
 class Player {
 public:
@@ -12,6 +14,8 @@ public:
     void update(float deltaTime);
 
     void draw() const;
+
+    void move(Vector2 dir, float deltaTime);
 
     void fireWeapon();
 

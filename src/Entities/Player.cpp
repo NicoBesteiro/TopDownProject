@@ -1,6 +1,4 @@
-#include "../include/Entities/Player.h" 
-#include "raymath.h"  
-#include <algorithm>  
+#include "../include/Entities/Player.h"  
 
 // Constructor 
 Player::Player(Vector2 position_, float radiusSize_, float speed_, Color color_)
@@ -10,10 +8,6 @@ Player::Player(Vector2 position_, float radiusSize_, float speed_, Color color_)
     color(color_) {}
 
 void Player::update(float deltaTime) {
-    if (IsKeyDown(KEY_D))    position.x += speed * deltaTime;
-    if (IsKeyDown(KEY_A))    position.x -= speed * deltaTime;
-    if (IsKeyDown(KEY_W))    position.y -= speed * deltaTime;
-    if (IsKeyDown(KEY_S))    position.y += speed * deltaTime;
     if (IsKeyPressed(KEY_SPACE))    fireWeapon();
 
     for (auto& i : bullets) {
@@ -35,6 +29,11 @@ void Player::draw() const {
             i.draw();
         }
     }
+}
+
+void Player::move(Vector2 dir, float deltaTime) {
+    position.x += dir.x + speed * deltaTime;
+    position.y += dir.y + speed * deltaTime;
 }
 
 void Player::fireWeapon() {
